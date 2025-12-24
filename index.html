@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <title>MiniTube</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-        <h1>Salom</h1>
+    <header class="header">
+        <h1>MiniTube</h1>
+        <button id="openModal">＋ Добавить пост</button>
+    </header>
 
-    <script src="./main.js"></script>
+    <main class="container" id="postsContainer">
+        <!-- Посты будут добавляться через JS -->
+    </main>
+
+    <!-- Модальное окно -->
+    <div class="modal hidden" id="modal">
+        <div class="modal-content">
+            <h2>Новый пост</h2>
+
+            <select id="type">
+                <option value="video">Видео</option>
+                <option value="image">Фото</option>
+            </select>
+
+            <input type="text" id="title" placeholder="Название" />
+            <input type="file" id="file" accept="image/*,video/*" />
+
+            <div class="modal-actions">
+                <button id="addPost">Добавить</button>
+                <button id="closeModal">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
